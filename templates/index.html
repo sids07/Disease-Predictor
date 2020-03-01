@@ -1,0 +1,221 @@
+<html>
+    <head>
+        <title>Disease Predictor and Specialist Recommender</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+        <!--<img src = "{% static "images/doctor_02.jpg" %}" />-->
+
+        <!--<img src = "{% static "images/doctors-bg.png" %}" />-->
+        <!--<img src = "{% static "images/E.png" %}" />-->
+
+        <!--<img src = "{% static "images/fb-logo(3).png" %}" />-->
+
+        <!--<img src = "{% static "images/logo.png" %}" />-->
+        <!--<img src = "{% static "images/logo1.png" %}" />-->
+        <!--<img src = "{% static "images/logoo.png" %}" />-->
+        <!---->
+
+        <!--<img src = "{% static "images/service-bg.png" %}" />-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    </head>
+    <body>
+
+        <!--<img src="{% static 'images/about-us.png' %}">-->
+        <section id="nav-bar">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html"><img src = "{% static 'images/logooo.png' %}" alt="image" /> </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">HOME </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#about-us">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#services">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#doctors">DOCTORS</a>
+                      </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#testimonials">TESTIMONIALS</a>
+                    </li>
+                      <li class="nav-item">
+                      <a class="nav-link" href="#user-profile">ACCOUNT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#social-media">CONTACT</a>
+                      </li>
+                      <!--<nav class="navbar navbar-white">-->
+  <!--<form class="form-inline">-->
+    <!--<button class="btn btn-outline-success" type="button"><font color="white"><a href="/choose.html">Login</a></font> </button>-->
+    <!--<button class="btn btn-outline-success" type="button"><font color="white"><a href="/choosereg.html">Sign Up</a></font></button>-->
+
+  <!--</form>-->
+<!--</nav>-->
+                  </ul>
+                </div>
+              </nav>
+        </section>
+        <!--banner section-->
+        <section id="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="promo"> <a href="" class="typewrite" data-period="2000" data-type='[ "Welcome to Life Care", "We Care Your Health", "We are Expert!" ]'>
+                          <span class="wrap"></span>
+                          </a> </p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                         <img src = "{% static 'images/phone.png' %}" />
+                    </div>
+                </div>
+            </div>
+            <img src = "{% static 'images/wave.png' %}" class="bottom-img"/>
+        </section>
+ <!--Aboutus section-->
+  <section id="about-us">
+    <div class="container">
+      <h1 class="title text-center">WHY VISIT US?</h1>
+      <div class="row">
+        <div class="col-md-6 about-us">
+          <p class="about-title">Why we're different?</p>
+          <ul>
+            <li>An easy and friendly web interface</li>
+            <li>Approach to general diseases</li>
+            <li>Know what you are suffering from</li>
+            <li>Details about nearby specialist</li>
+            <li>Accurate results on your hands.</li>
+            <li>We protect your datas</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+           <img src = "{% static 'images/about-us.jpg' %}" />
+        </div>
+      </div>
+    </div>
+  </section>
+        <!--services section-->
+        <section id="services" class="services wow fadeIn">
+          <div class="container text-center">
+            <h1 class="title">WHAT WE DO?</h1>
+             <div class="row text-center">
+                <div class="col-md-6 services">
+                          <img src = "{% static 'images/service-icon2.png' %}" class="service-img" />
+                            <h4>Disease Prediction Facilities</h4>
+                            <p>We provide disease prediction services on the basis of your chosen symptoms.</p>
+                </div>
+                <div class="col-md-6 services">
+                   <img src = "{% static 'images/service-icon3.png' %}" class="service-img" />
+
+                    <h4>Detailed Specialist</h4>
+                    <p>On the basis of disease predicted,we provide you a detailed list of Specialist.</p>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary">All Services</button>
+            </div>
+          </section>
+ <!-- doctor section -->
+ <section id="doctors">
+  <div class="container text-center">
+    <h1 class="title text-center">The Specialists</h1>
+     <div class="row text-center">
+        <div class="col-md-4 doctors">
+                   <img src = "{% static 'images/doctor_01.jpg' height=100px %}" class="doctors-img" />
+                    <h4>Dr. Sandeep Shakya</h4>
+                    <p>ENT Specialist</p>
+        </div>
+        <div class="col-md-4 doctors">
+         <img src = "{% static 'images/doctor_02.jpg' %}" class="doctors-img">
+            <h4>Dr. Kanchan Singh</h4>
+            <p>Gynaecologist</p>
+        </div>
+        <div class="col-md-4 doctors">
+       <img src = "{% static 'images/doctor_03.jpg' %}" class="doctors-img" />
+      <h4>Dr. Lily Baniya</h4>
+      <p>Cardiologist</p>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary">All available doctors</button>
+    </div>
+
+  </section>
+
+
+<!--Testimonials section-->
+<section id="testimonials" >
+  <div class="container testi">
+    <h1 class="title text-center">WHAT OUR USERS SAY?</h1>
+    <div class="row offset-1">
+      <div class="col-md-5 testimonials">
+        <p>Thanks for your easy and friendly webpage. It led us to predict my symptoms at an early stage.</p>
+         <img src = "{% static 'images/testi_01.png' %}" />
+        <p class="user-details"><b>Bishal Adhikari</b><br>Manager of Racer</br></p>
+        </div>
+        <div class="col-md-5 testimonials">
+          <p>Thankyou for the detailed appointment information of doctors, it helped me reach on time.</p>
+          <img src = "{% static 'images/testi_02.png' %}" />
+          <p class="user-details"><b>Susan Shrestha</b><br>Worker at XYZ ltd.</br></p>
+          </div>
+    </div>
+    </div>
+    </section>
+        <!------accountsection-->
+<section id="user-profile">
+  <div class="container text-center">
+    <h1 class="title">MEMBERSHIP DETAILS</h1>
+      <div class="account text-center">
+        <h4>New Member?</h4>
+        <button type="button" class="btn btn-primary"><a href="/register.html"><font color="white"> Register Here</font></a></button>
+
+      </div>
+    <h4>Already A Member?</h4>
+    <button type="button" class="btn btn-primary"><a href="/login.html"><font color="white"> Login Here</font></a></button></div>
+
+  </div>
+</section>
+    <!--contact section-->
+    <section id="social-media">
+      <div class="container text-center">
+        <p>FIND US ON SOCIAL MEDIA</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/"><img src = "{% static 'images/fb-logo(1).png' %}" /></a>
+          <a href="https://www.instagram.com/"><img src = "{% static 'images/fb-logo(2).png' %}" /></a>
+          <a href="https://www.twitter.com/"><img src = "{% static 'images/fb-logo(4).png' %}" /></a>
+        </div>
+      </div>
+</section>
+<footer class="mastfoot mt-auto text-center">
+  <div class="inner">
+    <p>© Disease Predictor and Specialist Recommender.</p>
+  </div>
+</footer>
+    </body>
+</html>

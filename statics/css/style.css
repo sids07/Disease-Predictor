@@ -1,0 +1,268 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    font-family: sans-serif;
+}
+#nav-bar{
+   position: sticky;
+   top: 0;
+   z-index: 10;
+}
+.navbar{
+    background-image: linear-gradient(to right,#2895f1,#0060b1);
+    padding: 0 !important;
+}
+
+.navbar-nav li{
+    padding: 0 10px;
+}
+.navbar-nav li a{
+    color: white !important;
+    font-weight: 600;
+    float: right;
+    text-align: left;
+}
+.fa-bars{
+    color: white;
+    font-size: 30px !important;
+}
+.navbar-toggler{
+    outline: none !important;
+}
+/*---------bannersection------*/
+#banner{
+    background-image: linear-gradient(to right,#2895f1,#0060b1);
+    color: white;
+    padding-top: 5%;
+}
+.promo{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 100px;
+}
+.bottom-img{
+    width: 100%;
+}
+/*--------servicesection------*/
+#services
+{
+    background-image: url('/static/images/service-bg.png');
+    padding: 80px 0;
+
+}
+.service-img{
+    width: 100px;
+    margin-top: 20px;
+}
+.services{
+    padding: 20px;
+}
+.services h1{
+    margin-top: 10px;
+    color: white;
+}
+.services h4{
+    padding: 5px;
+    margin-top: 25px;
+    text-transform: uppercase;
+    color: white !important;
+}
+.services p{
+    color: white;
+}
+.title::before{
+    content: '';
+    background: #135081;
+    height: 5px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    color: white;
+    transform: translateY(63px);
+}
+.title::after{
+    content: '';
+    background: #135081;
+    height: 10px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    display: block;
+    color: white;
+    transform: translateY(8px);
+}
+#services .btn-primary{
+    box-shadow: none;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 20px;
+}
+
+/*--------doctorssection------*/
+#doctors
+{
+    background-image: url("/static/images/doctors-bg.png");
+    padding: 55px 0;
+}
+
+.doctors-img{
+    width: 50px;
+    margin-top: 20px;
+    height: 50px;;
+}
+/*.img {
+    vertical-align: middle;
+    border-style: none;
+    height: 100px;
+}*/
+.doctors{
+    padding: 10px;
+}
+.doctors h4{
+    padding: 5px;
+    margin-top: 25px;
+    text-transform: uppercase;
+
+}
+.title::before{
+    content: '';
+    background: #135081;
+    height: 5px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transform: translateY(63px);
+}
+.title::after{
+    content: '';
+    background: #135081;
+    height: 10px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    display: block;
+    transform: translateY(8px);
+}
+#doctors .btn-primary{
+    box-shadow: none;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 20px;
+
+}
+/*-------------aboutussection-------*/
+#about-us
+{
+    background: #f8f9fa;
+    padding-bottom: 50px;
+    padding-top: 45px;
+}
+.about-title{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 8%;
+}
+#about-us ul li{
+    margin: 10px 0;
+}
+#about-us ul{
+    margin-left: 20px;
+}
+/*----testimonials----*/
+#testimonials{
+    background-image: linear-gradient(to right,#2895f1,#0060b1);
+    margin: 100px 0;
+    padding-top: 100px;
+}
+.testimonials{
+    border-left: 4px solid #135081;
+    color: white !important;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.testi h1{
+    color: white !important;
+}
+.title::before{
+    content: '';
+    background: #135081;
+    height: 5px;
+    width: 200px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    color: white !important;
+    transform: translateY(63px);
+}
+.title::after{
+    content: '';
+    background: #135081;
+    height: 10px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    display: block;
+    color: white !important;
+    transform: translateY(8px);
+}
+.testimonials img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+.user-details{
+    display: inline-block;
+    font-size: 12px;
+}
+/*-----------user-pofile---------*/
+#user-profile{
+    background: #f8f9fa;
+    padding: 50px 0;
+}
+#account .btn-primary{
+    box-shadow: none;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 20px;
+}
+
+.account{
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 35px;
+}
+/*------socialmedia-------*/
+#social-media{
+    background: #f8f9fa;
+    padding: 200px 0;
+}
+#social-media p{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.social-icons img{
+    width: 100px;
+    transition: 0.5s;
+}
+.social-icons a:hover img{
+    transform: translateY(-10px);
+}
+/*
+ * Footer
+ */
+ .mastfoot {
+    color: #0060b1;
+
+  }
