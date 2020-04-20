@@ -2,6 +2,14 @@
     <head>
         <title>Disease Predictor and Specialist Recommender</title>
         {% load static %}
+        {% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{message.tags}}">
+  {{ message }}
+</div>
+{% endfor%}
+{% endif %}
+
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 
@@ -19,21 +27,6 @@
 
         <!--<img src = "{% static "images/service-bg.png" %}" />-->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
@@ -50,10 +43,36 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <i class="fa fa-bars"></i>
                 </button>
+                
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="index.html">HOME </a>
+                      {% if user.is_authenticated %}
+                      <a class="nav-link" href="/index">HOME </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#about-us">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#services">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#doctors">DOCTORS</a>
+                      </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#testimonials">TESTIMONIALS</a>
+                    </li>
+                      <li class="nav-item">
+                      <a class="nav-link" href="/accounts/profile">Profile</a>
+                    </li>
+                                          <li class="nav-item">
+                      <a class="nav-link" href="/logout">Logout{{user.username}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#social-media">CONTACT</a>
+                      </li>
+                      {%else%}
+                      <a class="nav-link" href="/index">HOME </a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#about-us">ABOUT US</a>
@@ -73,6 +92,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#social-media">CONTACT</a>
                       </li>
+                      {%endif%}
                       <!--<nav class="navbar navbar-white">-->
   <!--<form class="form-inline">-->
     <!--<button class="btn btn-outline-success" type="button"><font color="white"><a href="/choose.html">Login</a></font> </button>-->
@@ -193,11 +213,11 @@
     <h1 class="title">MEMBERSHIP DETAILS</h1>
       <div class="account text-center">
         <h4>New Member?</h4>
-        <button type="button" class="btn btn-primary"><a href="/register.html"><font color="white"> Register Here</font></a></button>
+        <button type="button" class="btn btn-primary"><a href="/register"><font color="white"> Register Here</font></a></button>
 
       </div>
     <h4>Already A Member?</h4>
-    <button type="button" class="btn btn-primary"><a href="/login.html"><font color="white"> Login Here</font></a></button></div>
+    <button type="button" class="btn btn-primary"><a href="/login"><font color="white"> Login Here</font></a></button></div>
 
   </div>
 </section>

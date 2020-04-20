@@ -1,0 +1,229 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: linear-gradient(to right,#2895f1,#0060b1);
+    font-family: sans-serif;
+}
+/*
+#nav-bar{
+   position: sticky;
+   top: 10;
+   z-index: 10; 
+}
+.navbar{
+    background-image: linear-gradient(to right,#2895f1,#0060b1);
+    padding: 0 !important;
+}
+
+.navbar-nav li{
+    padding: 0 10px;
+}
+.navbar-nav li a{
+    color: white !important;
+    font-weight: 600;
+    float: right;
+    text-align: left;
+    border-bottom: .20rem solid transparent;
+}
+.fa-bars{
+    color: white;
+    font-size: 30px !important;
+}
+.navbar-toggler{
+    outline: none !important;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255);
+}
+*/
+
+.contents
+{
+	margin-top: 5px;
+	padding:50px;
+	background-color:rgb(255, 255, 255);
+	
+}
+
+.cover-container {
+    max-width: 60em;
+  }
+  
+  /*
+ * Header
+ */
+.masthead {
+    margin-bottom: 2rem;
+  }
+  
+  .masthead-brand {
+    margin-bottom: 0;
+  }
+  
+  .nav-masthead .nav-link {
+    padding: .25rem 0;
+    font-weight: 700;
+    color: rgba(255, 255, 255);
+    background-color: transparent;
+    border-bottom: .25rem solid transparent;
+  }
+  
+  .nav-masthead .nav-link:hover,
+  .nav-masthead .nav-link:focus {
+    border-bottom-color: rgba(255, 255, 255, 0.25);
+  }
+  
+  .nav-masthead .nav-link + .nav-link {
+    margin-left: 3rem;
+  }
+  
+  .nav-masthead .active {
+    color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+  }
+  
+/*-------------Title--------------*/
+  .title::before{
+    content: '';
+    background: #135081;
+    height: 5px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    color: white;
+    transform: translateY(63px);
+}
+.title::after{
+    content: '';
+    background: #135081;
+    height: 10px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    display: block;
+    color: white;
+    transform: translateY(8px);
+}
+
+
+/*----------------------SUBMIT BUTTON----------------*/
+.submit{
+    cursor: pointer;
+  border-radius: 5em;
+  width: 22%;
+    color: #fff;
+    background: linear-gradient(to right,#2895f1,#0060b1);
+    border: 0;
+    font-family: 'Ubuntu', sans-serif;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 25px;
+    font-size: 16px;
+ }
+
+ /*-----------------------DETAILS SECTION------------------*/
+
+
+.file{
+  position: relative;
+  overflow: hidden;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border: none;
+  border-radius: 5em;
+  font-size: 15px;
+  background:transparent;
+}
+.file input {
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0;
+}
+
+
+.profile-edit-btn{
+  border: none;
+  border-radius: 1.5rem;
+  width: 30%;
+  padding: 15px 45px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(to right,#2895f1,#0060b1);
+  cursor: pointer;
+}
+.profile-tab label{
+  margin-top: 5px;
+  margin-left: 208px;
+  font-weight: 600;
+}
+.profile-tab p{
+  margin-left: 160px;
+  margin-top: 5px;
+  font-weight: 600;
+  color: #0062cc;
+}
+/*---------------Search Doctor Section-----------------*/
+.doctors{
+    margin-top: 5px;
+    text-align: center;
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.inputtext{
+    margin-top: 20px;
+}
+.search-text {
+    width: 22%;
+    color: black;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    text-align: center;
+    font-family: sans-serif;
+    }
+
+
+/*-------Feedback----------*/
+.feedback-text {
+    width: 30%;
+    color: black;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 50px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    text-align: center;
+    font-family: sans-serif;
+    }
+
+
+
+ /*
+ * Footer
+ */
+ .mastfoot {
+    color: #0060b1;
+    
+  }

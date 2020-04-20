@@ -15,17 +15,28 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.contrib.auth import views as auth_views
+from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from htmlcss import views
+from users import views as users_views
 # from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home),
-    path('index.html/', views.home, name='index.html'),
-    path('register.html/',views.register ,name='register.html'),
-    path('new.html/', views.new, name='new.html'),
-    path('login.html/', views.login, name='login.html'),
+    path('index/', views.home, name='index'),
+    path('register/',users_views.register ,name='register'),
+    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
+    path('new/', views.new, name='new'),
+    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
+    path('accounts/profile/', users_views.profile, name='profile'),
     # path('choose.html/', views.choose, name='choose.html'),
     # path('choosereg.html/', views.choosereg, name='chooseregister.html'),
 
-]
+] +static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -14,3 +14,4 @@ def choose(request):
     return render(request,'choose.html')
 def choosereg(request):
     return render(request,'choosereg.html')
+"""This script direct requests to html and forms created."""

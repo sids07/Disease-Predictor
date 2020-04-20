@@ -1,0 +1,119 @@
+{% load static %}
+{% block content %}	
+
+
+{% load crispy_forms_tags %}
+<html>
+
+<head>
+	 <link rel="stylesheet" href="{% static 'css/style.css' %}">  
+  <title>Sign in</title>
+     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+        <link rel="stylesheet" href="{% static 'css/stylelogin.css' %}">
+</head>
+<body>
+	       <section id="nav-bar">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html"><img src = "{% static 'images/logooo.png' %}" alt="image" /> </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <i class="fa fa-bars"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      {% if user.is_authenticated %}
+                      <a class="nav-link" href="/index">HOME </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#about-us">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#services">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#doctors">DOCTORS</a>
+                      </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#testimonials">TESTIMONIALS</a>
+                    </li>
+                      <li class="nav-item">
+                      <a class="nav-link" href="/profile">Profile</a>
+                    </li>
+                                          <li class="nav-item">
+                      <a class="nav-link" href="/logout">Logout{{user.username}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#social-media">CONTACT</a>
+                      </li>
+                      {%else%}
+                      <a class="nav-link" href="index.html">HOME </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#about-us">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#services">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#doctors">DOCTORS</a>
+                      </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#testimonials">TESTIMONIALS</a>
+                    </li>
+                      <li class="nav-item">
+                      <a class="nav-link" href="#user-profile">ACCOUNT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#social-media">CONTACT</a>
+                      </li>
+                      {%endif%}
+                      <!--<nav class="navbar navbar-white">-->
+  <!--<form class="form-inline">-->
+    <!--<button class="btn btn-outline-success" type="button"><font color="white"><a href="/choose.html">Login</a></font> </button>-->
+    <!--<button class="btn btn-outline-success" type="button"><font color="white"><a href="/choosereg.html">Sign Up</a></font></button>-->
+
+  <!--</form>-->
+<!--</nav>-->
+                  </ul>
+                </div>
+              </nav>
+        </section>
+<div class="content-section">
+	<div class="media">
+		<img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+		<div class="media-body">
+			<h2 class="account-heading">{{ user.username }}</h2>
+			<p class="text-secondary">{{ user.email }}</p>
+		</div>
+	</div>
+
+	<form method ="POST" enctype="multipart/form-data">
+		{% csrf_token%}
+		<fieldset class="form-group">
+			<legend class="border-bottom mb-4">
+				profile info
+			</legend>
+			{{ u_form | crispy }}
+			{{ p_form | crispy }}
+			
+		</fieldset>
+		<div class="form-group">
+			<button class= "btn btn-outline-info" type="submit">
+				update
+			</button>
+			
+
+		</div>
+		
+	</form>
+</div>
+</body>
+
+{% endblock content %}	
+</html>
